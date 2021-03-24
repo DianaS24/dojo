@@ -17,8 +17,8 @@ def move_player(value):
     if value == "a" or value == "A":
         p2 = p2 - 1
 
-    if p2 > 4: p2 = 0
-    if p2 < 0: p2 = 4
+    if p2 > 5: p2 = 0
+    if p2 < 0: p2 = 5
 
     return fighters[p1][p2]
 
@@ -29,7 +29,7 @@ print("Choose your player:")
 print()
 for x1 in range(len(fighters)):
     for x2 in range(len(fighters[x1])):
-        print("[" + fighters[x1][x2] + "]", end=' ')
+        print("[" + fighters[x1][x2] + "]")
     print()
 print()
 
@@ -37,5 +37,5 @@ print("Press the w (up), s (down), a (left), d (right) keys to select or press t
 
 key = ""
 while key != "e":
-    key = input()
+    key = raw_input()
     print(move_player(key))
